@@ -1,5 +1,5 @@
 //your JS code here. If required.
-const usernameInput = document.getElementById('username');
+  const usernameInput = document.getElementById('username');
   const passwordInput = document.getElementById('password');
   const rememberMeCheckbox = document.getElementById('rememberMe');
   const submitButton = document.getElementById('submit');
@@ -9,7 +9,7 @@ const usernameInput = document.getElementById('username');
   const savedUsername = localStorage.getItem('username');
   const savedPassword = localStorage.getItem('password');
   if (savedUsername && savedPassword) {
-    existingUserButton.style.display = 'block';
+    rememberMeCheckbox.checked = true;
   }
 
   
@@ -27,12 +27,8 @@ const usernameInput = document.getElementById('username');
       localStorage.removeItem('username');
       localStorage.removeItem('password');
     }
-
     alert(`Logged in as`);
   });
 
   
-  existingUserButton.addEventListener('click', () => {
-    const savedUsername = localStorage.getItem('username');
-    alert(`Logged in as`);
-  });
+ 
